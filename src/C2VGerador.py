@@ -2,8 +2,9 @@ import os
 
 class C2VGerador:
   
-  def __init__(self, variaveis):
+  def __init__(self, variaveis, saida):
     self.variaveis = variaveis
+    self.saida = saida # Arquivo de saída
   
 
   def gerar(self):
@@ -19,7 +20,7 @@ class C2VGerador:
       for var in self.variaveis.keys(): # Iterando sobre o dicionário (var recebe as chaves do dicionário)
         html = html.replace("{{ " + var + " }}" , self.traduzirParaHTML(var, self.variaveis[var]))
 
-      final = open('final.html', 'w') # Caminho relativo salvará na pasta raiz do projeto
+      final = open(self.saida, 'w') # Caminho relativo salvará na pasta raiz do projeto
       final.write(html)
 
   def traduzirParaHTML(self, tipo, valor):
@@ -30,8 +31,6 @@ class C2VGerador:
     """
 
     final = str(valor) # Algumas variáveis não requerem tratamento. Basta o valor originalmente passado
-
-    #print('atributo = ', tipo, ' e valor = ', valor)
 
     if tipo == "preco":
       final = self.traduzirPreco(valor)
