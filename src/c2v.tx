@@ -1,0 +1,33 @@
+Pagina: comandos+=Comando; // Um ou mais comandos
+
+// Um comando pode ser uma definição de atributo ou uma listagem de atributos
+Comando: ComandoDefina | ComandoListe; // Regra abstrata. Não haverá uma classe "Comando", apenas uma instância de uma das regras possíveis
+
+ComandoDefina: tipo=TipoDeDefinicao ':' argumento=Argumento; // Definição de atributo
+ComandoListe: tipo=TipoDeLista ':' 'inicio' lista*=Listagem 'fim'; // Listagem de atributos
+
+// Regra abstrata para diferentes tipos de listas.
+Listagem: Avaliacao | Loja | Sugestao | Pagamento ;
+
+Avaliacao: 'nota' nota=Argumento 'descricao' descricao=Argumento 'autor' autor=Argumento;
+Loja: 'nome' nome=Argumento  'site' site=Argumento;
+Sugestao: 'produto' produto=Argumento 'preco' preco=Argumento;
+Pagamento: AVista | Parcelado; // 2 tipos de pagamentos predefinidos, à vista e parcelado; regra abstrata
+
+// Formas de pagamentos
+AVista: modo='a vista' ('desconto' desconto=Argumento)?; // Pagamento à vista com possibilidade de desconto
+Parcelado: modo='parcelado' ('de' minimo=Argumento)? 'ate' maximo=Argumento;
+
+// Definições de palavras-chave para diferentes comandos
+TipoDeDefinicao: 'titulo' | 'codigo' | 'imagem' | 'preco' | 'descricao' | 'loja' ;
+TipoDeLista: 'avaliacoes' | 'lojas' | 'sugestoes' | 'pagamentos';
+
+// Dentro de strings também são considerados caminhos de arquivos, os quais serão validados pelo interpretador
+Argumento: STRING | NUMBER;
+
+// Sugestão do textX para identificação de comentários iniciados por '//'. Deve-se manter o nome da regra em inglês
+Comment: /\/\/.*$/; 
+
+// Verificar se o caminho é um caminho válido -> Semântico
+// Verificar se o tipo do argumento é valido para a atribuição -> Semântico
+// Verificar se uma mesma definição ocorre mais de uma vez -> Semântico

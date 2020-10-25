@@ -1,0 +1,260 @@
+<!-- Template de HTML a ser usado na geração de código -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- O charset deve ser UTF-8 -->
+    <style>
+      :root {
+        --escura: darkred;
+        --contraste-escura: white;
+
+        --padrao: #cc2626;
+        --contraste-padrao: white;
+
+        --clara: lightcoral;
+        --contraste-clara: black;
+      }
+
+      body {
+        margin: 0px;
+        background-color: lavender;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        min-height: 100%;
+      }
+
+      header {
+        background-color: var(--padrao);
+        display: flex;
+        height: 70px;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        width: 100%;
+      }
+
+      #main {
+        min-width: 70%;
+        max-width: 90%;
+        background-color: white;
+        margin: 10px auto;
+        display: flex;
+        align-self: flex-start;
+      }
+
+      .flex-item {
+        flex-grow: 1;
+        margin: 10px;
+        max-width: 40%;
+      }
+
+      #imagem {
+        background-color: var(--escura);
+        color: var(--contraste-escura);
+        max-width: 33%;
+      }
+
+      #imagem > img {
+        max-width: 100%;
+      }
+
+      .no-margin-heading {
+        margin: 0px;
+      }
+
+      .padding-5 {
+        padding: 5px;
+      }
+
+      #dados-produto {
+        min-width: 33%;
+      }
+
+      #nome-produto {
+        background-color: var(--clara);
+        padding: 5px;
+        text-align: center;
+      }
+
+      #codigo {
+        background-color: var(--escura);
+        text-align: center;
+        color: var(--contraste-escura);
+      }
+
+      #descricao {
+        background-color: var(--padrao);
+        text-align: justify;
+        padding: 5px;
+        margin-top: 10px;
+        color: var(--contraste-padrao);
+        white-space: pre-wrap;
+      }
+
+      #preco {
+        background-color: var(--escura);
+        color: var(--contraste-escura);
+        text-align: center;
+        font-size: 20px;
+      }
+
+      #pagamento {
+        background-color: var(--padrao);
+        color: var(--contraste-padrao);
+      }
+
+      #parcelas {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .parcelado-item {
+        padding: 2px;
+        margin-left: 10px;
+        width: 45%;
+        max-width: 45%;
+      }
+
+      #lojas {
+        background-color: var(--clara);
+      }
+
+      #link-loja {
+        text-decoration: none;
+        color: var(--contraste-clara);
+      }
+
+      #comprar {
+        display: block;
+        background-color: var(--padrao);
+        color: var(--contraste-padrao);
+        margin-top: 15px;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      #avaliacoes {
+        background-color: var(--clara);
+        margin: 0 auto;
+        min-width: 70%;
+        max-width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+      }
+
+      .sem-avaliacoes,
+      .sem-sugestoes {
+        /* Para o caso onde não há elementos */
+        text-align: center;
+        margin: auto;
+      }
+
+      .avaliacao {
+        width: 100%;
+        display: flex;
+        background-color: var(--clara);
+      }
+
+      .avaliacao-cabecalho {
+        background-color: var(--escura);
+        color: var(--contraste-escura);
+      }
+
+      .avaliacao-titulo {
+        margin: auto;
+      }
+
+      .avaliacao-titulos {
+        background-color: var(--padrao);
+        color: var(--contraste-padrao);
+        font-weight: bold;
+      }
+
+      .avaliacao-item {
+        padding: 10px;
+        min-width: 15%;
+        text-align: center;
+      }
+
+      .avaliacao-descricao {
+        flex-grow: 1;
+        white-space: pre-wrap;
+        text-align: justify;
+      }
+
+      footer {
+        background-color: var(--padrao);
+        color: var(--contraste-padrao);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-top: auto;
+        width: 100%;
+        padding: 5px 0px; /*'padding-5' não foi utilizado pois causva overflow no width total*/
+        text-align: center;
+      }
+
+      #sugestoes {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .sugestao {
+        max-width: 150px;
+      }
+
+      .divisor-horizontal {
+        border: none;
+        border-bottom: 2px solid var(--escura);
+        margin: 5px 0px;
+        margin: 0 auto;
+        width: 98%;
+      }
+
+      .divisor-vertical {
+        border: none;
+        border-right: 2px solid var(--clara);
+        margin: 0px 25px;
+      }
+
+      .centro-vertical {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <title>{{ titulo }}</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>{{ loja }}</h1>
+    </header>
+
+    <div id="main">
+      <div id="imagem" class="flex-item centro-vertical">{{ imagem }}</div>
+      <div id="dados-produto" class="flex-item">
+        <section>
+          <h2 id="nome-produto" class="no-margin-heading">{{ titulo }}</h2>
+          <div id="codigo">{{ codigo }}</div>
+          <div id="descricao">{{ descricao }}</div>
+        </section>
+      </div>
+      <div class="flex-item">
+        <div id="preco" class="padding-5">{{ preco }}</div>
+        <div id="pagamento" class="padding-5">{{ pagamentos }}</div>
+        <div id="lojas" class="padding-5">{{ lojas }}</div>
+
+        <a id="comprar" class="padding-5" href="#">Comprar</a>
+      </div>
+    </div>
+    <div id="avaliacoes">{{ avaliacoes }}</div>
+    <footer>
+      <div id="sugestoes">{{ sugestoes }}</div>
+    </footer>
+  </body>
+</html>
