@@ -1,0 +1,262 @@
+<!-- Template de HTML a ser usado na geração de código -->
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- O charset deve ser UTF-8 -->
+    <style>
+      :root {
+        --escura: darkred;
+        --contraste-escura: white;
+
+        --padrao: #cc2626;
+        --contraste-padrao: white;
+
+        --clara: lightcoral;
+        --contraste-clara: black;
+      }
+
+      body {
+        margin: 0px;
+        background-color: lavender;
+        font-family: Arial, Helvetica, sans-serif;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        min-height: 100%;
+      }
+
+      header {
+        background-color: var(--padrao);
+        display: flex;
+        height: 70px;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        width: 100%;
+      }
+
+      #main {
+        min-width: 70%;
+        max-width: 90%;
+        background-color: white;
+        margin: 10px auto;
+        display: flex;
+        align-self: flex-start;
+      }
+
+      .flex-item {
+        flex-grow: 1;
+        margin: 10px;
+        max-width: 40%;
+      }
+
+      #imagem {
+        background-color: var(--escura);
+        color: var(--contraste-escura);
+        max-width: 33%;
+      }
+
+      #imagem > img {
+        max-width: 100%;
+      }
+
+      .no-margin-heading {
+        margin: 0px;
+      }
+
+      .padding-5 {
+        padding: 5px;
+      }
+
+      #dados-produto {
+        min-width: 33%;
+      }
+
+      #nome-produto {
+        background-color: var(--clara);
+        padding: 5px;
+        text-align: center;
+      }
+
+      #codigo {
+        background-color: var(--escura);
+        text-align: center;
+        color: var(--contraste-escura);
+      }
+
+      #descricao {
+        background-color: var(--padrao);
+        text-align: justify;
+        padding: 5px;
+        margin-top: 10px;
+        color: var(--contraste-padrao);
+        white-space: pre-wrap;
+      }
+
+      #preco {
+        background-color: var(--escura);
+        color: var(--contraste-escura);
+        text-align: center;
+        font-size: 20px;
+      }
+
+      #pagamento {
+        background-color: var(--padrao);
+        color: var(--contraste-padrao);
+      }
+
+      #parcelas {
+        display: flex;
+        flex-wrap: wrap;
+      }
+
+      .parcelado-item {
+        padding: 2px;
+        margin-left: 10px;
+        width: 45%;
+        max-width: 45%;
+      }
+
+      #lojas {
+        background-color: var(--clara);
+      }
+
+      #link-loja {
+        text-decoration: none;
+        color: var(--contraste-clara);
+      }
+
+      #comprar {
+        display: block;
+        background-color: var(--padrao);
+        color: var(--contraste-padrao);
+        margin-top: 15px;
+        text-align: center;
+        text-decoration: none;
+      }
+
+      #avaliacoes {
+        background-color: var(--clara);
+        margin: 0 auto;
+        min-width: 70%;
+        max-width: 90%;
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 15px;
+      }
+
+      .sem-avaliacoes,
+      .sem-sugestoes {
+        /* Para o caso onde não há elementos */
+        text-align: center;
+        margin: auto;
+      }
+
+      .avaliacao {
+        width: 100%;
+        display: flex;
+        background-color: var(--clara);
+      }
+
+      .avaliacao-cabecalho {
+        background-color: var(--escura);
+        color: var(--contraste-escura);
+      }
+
+      .avaliacao-titulo {
+        margin: auto;
+      }
+
+      .avaliacao-titulos {
+        background-color: var(--padrao);
+        color: var(--contraste-padrao);
+        font-weight: bold;
+      }
+
+      .avaliacao-item {
+        padding: 10px;
+        min-width: 15%;
+        text-align: center;
+      }
+
+      .avaliacao-descricao {
+        flex-grow: 1;
+        white-space: pre-wrap;
+        text-align: justify;
+      }
+
+      footer {
+        background-color: var(--padrao);
+        color: var(--contraste-padrao);
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-top: auto;
+        width: 100%;
+        padding: 5px 0px; /*'padding-5' não foi utilizado pois causva overflow no width total*/
+        text-align: center;
+      }
+
+      #sugestoes {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      .sugestao {
+        max-width: 150px;
+      }
+
+      .divisor-horizontal {
+        border: none;
+        border-bottom: 2px solid var(--escura);
+        margin: 5px 0px;
+        margin: 0 auto;
+        width: 98%;
+      }
+
+      .divisor-vertical {
+        border: none;
+        border-right: 2px solid var(--clara);
+        margin: 0px 25px;
+      }
+
+      .centro-vertical {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+    <title>Smart TV QLED 65pol Samsung 8K HDR QN65Q900RBGXZD 4 HDMI</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Coli e Vitor</h1>
+    </header>
+
+    <div id="main">
+      <div id="imagem" class="flex-item centro-vertical"><img src='imagens/qled8k.jpg'></img></div>
+      <div id="dados-produto" class="flex-item">
+        <section>
+          <h2 id="nome-produto" class="no-margin-heading">Smart TV QLED 65pol Samsung 8K HDR QN65Q900RBGXZD 4 HDMI</h2>
+          <div id="codigo">--</div>
+          <div id="descricao">Samsung SMART TV, Bixby - Ingês - EUA e UK, Coreano, Francês, Alemão, Italiano, Espanhol, Interação por voz (Português - Brasil), Comando de Voz à distância - Sim (até 1,5m do controle remoto), Navegador (Web Browser), Suporte ao app SmartThings, SmartThings, Galeria, Acessibilidade - Aprenda a mexer no Controle Remoto da TV (Inglês - Estados Unidos, Portugues - Brasil), See Colors, Cores Negativas, Preto e Branco, Guia de Voz e Aprenda a mexer no Menu (Inglês - Estados Unidos, Português - Brasil), Ampliar, Aumento de contraste, Áudio de múltiplas saídas, Digital Clean View, Busca automática de canais, Desligamento Automático, Legenda, Connect Share™ (HDD), ConnectShare™ (USB 2.0), EPG, PVR Estendido, Modo Game (Modo Game Automático, Game Motion Plus, Dynamic Black EQ, Game Enhancer), Tecnologia FreeSync VRR, Idioma (Local - Brasil - Português), BT HID integrado, Compatível com HID USB, Time Shift, IPv6 Support, MBR Support, Sensor Ecológico, Selo Procel (C), Digital Broadcasting (ISD B-T), Sintonizador Analógico, Data Broadcasting (GINGA), TV Key, Espelhamento da TV para Mobile, Espelhamento do Smartphone para TV, DLNA, 360 Video Player, Suporte à camera 360, Bluetooth Low Energy, WiFi Direct, Som da TV para smartphone, Espelhamento de Áudio</div>
+        </section>
+      </div>
+      <div class="flex-item">
+        <div id="preco" class="padding-5"><b>R$10999.00</b></div>
+        <div id="pagamento" class="padding-5"><div class='padding-5'>À vista: <b>R$9899.10</b> - (10% de desconto)</div><div class='padding-5'> Parcelado: <div id='parcelas'><div class='parcelado-item'>2x de <b>R$5499.5</b></div><div class='parcelado-item'>3x de <b>R$3666.33</b></div><div class='parcelado-item'>4x de <b>R$2749.75</b></div><div class='parcelado-item'>5x de <b>R$2199.8</b></div><div class='parcelado-item'>6x de <b>R$1833.17</b></div><div class='parcelado-item'>7x de <b>R$1571.29</b></div><div class='parcelado-item'>8x de <b>R$1374.88</b></div><div class='parcelado-item'>9x de <b>R$1222.11</b></div><div class='parcelado-item'>10x de <b>R$1099.9</b></div><div class='parcelado-item'>11x de <b>R$999.91</b></div><div class='parcelado-item'>12x de <b>R$916.58</b></div><div class='parcelado-item'>13x de <b>R$846.08</b></div><div class='parcelado-item'>14x de <b>R$785.64</b></div><div class='parcelado-item'>15x de <b>R$733.27</b></div><div class='parcelado-item'>16x de <b>R$687.44</b></div><div class='parcelado-item'>17x de <b>R$647.0</b></div><div class='parcelado-item'>18x de <b>R$611.06</b></div></div></div></div>
+        <div id="lojas" class="padding-5"><div id='loja' class='padding-5'><a id='link-loja' href='https://www.submarino.com.br/produto/134241934/smart-tv-qled-8k-65-samsung-qn65q900rbgxzd-direct-full-array-16x-com-conversor-digital-4-hdmi-3-usb-wi-fi-hdr-3000-preta?epar=zoom&hl=lower&opn=COMPARADORESSUB&s_term=COMPARADORESSUB&sellerId=00776574000660'><h4 class='no-margin-heading'>Submarino</h4></a></div><hr class='divisor-horizontal'><div id='loja' class='padding-5'><a id='link-loja' href='https://www.americanas.com.br/produto/134241934?epar=ZOOM&s_term=YYNKZU&opn=YSMESP&hl=lower&loja=02'><h4 class='no-margin-heading'>Americanas</h4></a></div></div>
+
+        <a id="comprar" class="padding-5" href="#">Comprar</a>
+      </div>
+    </div>
+    <div id="avaliacoes"><div class='avaliacao avaliacao-cabecalho'><h3 class='no-margin-heading padding-5 avaliacao-titulo'>Avaliações</h3></div><div class='avaliacao avaliacao-titulos'><div class='avaliacao-item'>Nota</div><div class='avaliacao-item avaliacao-descricao'>Avaliação</div><div class='avaliacao-item'>Autor</div></div><div class='avaliacao'><div class='avaliacao-item centro-vertical'>5</div><div class='avaliacao-item avaliacao-descricao'>Melhor impossível. Produto de qualidade de segurança para entretenimento da família.satisfação completa. Obrigada !</div><div class='avaliacao-item centro-vertical'>Maria</div></div><hr class='divisor-horizontal'><div class='avaliacao'><div class='avaliacao-item centro-vertical'>5</div><div class='avaliacao-item avaliacao-descricao'>Poderia ter design melhor, mas vale a pena ter um. Possuo um Samsung antigo e design muito mai bonito
+</div><div class='avaliacao-item centro-vertical'>Gilberto</div></div><hr class='divisor-horizontal'><div class='avaliacao'><div class='avaliacao-item centro-vertical'>4</div><div class='avaliacao-item avaliacao-descricao'>TV muito boa segundo o pessoal que compra, pois não tenho grana pra isso..
+</div><div class='avaliacao-item centro-vertical'>Gustavo</div></div></div>
+    <footer>
+      <div id="sugestoes"><div class='sugestao'><h3 class='no-margin-heading padding-5'>Smart TV QLED 8K 75pol Samsung</h3><div><b>R$12999.00</b></div></div><hr class='divisor-vertical'><div class='sugestao'><h3 class='no-margin-heading padding-5'>Smart TV LED 65pol Samsung</h3><div><b>R$3999.00</b></div></div></div>
+    </footer>
+  </body>
+</html>
