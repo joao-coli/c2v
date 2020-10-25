@@ -22,7 +22,7 @@ class C2VArgParser:
 
     # Subparser para o comando 'gerar'
     self.gerar_parser = self.subparsers.add_parser('gerar', description='Parser para o subcomando de geração de código', 
-                                     help=("Dada um arquivo de entrada contendo código na linguagem C2V, "
+                                     help=("Dado um arquivo de entrada contendo código na linguagem C2V, "
                                       "gera um arquivo HTML com nome e localização definidos pelo"
                                       "parâmetro de saída."))
     self.gerar_parser.add_argument('-e', '--entrada', type=str, nargs=1, help=("Caminho para o arquivo de entrada "
@@ -31,6 +31,18 @@ class C2VArgParser:
     self.gerar_parser.add_argument('-s', '--saida', type=str, nargs=1, help=("Caminho para o arquivo de saída que"
                                                                     "irá conter o código HTML gerado."),
                                                                     required=True)
+
+    # Subparser para o comando 'testar'
+    self.testar_parser = self.subparsers.add_parser('testar', description='Parser para o subcomando de teste de casos de teste', 
+                                     help=("Dado um um ou mais tipos de testes que se deseja executar "
+                                      "executa a análise ou a geração de código para o tipo desejado. Podem"
+                                      "ser: --sintatico, --semantico ou --geracao"))
+    self.testar_parser.add_argument('--sintatico', help=("Executa os casos de teste para erros sintáticos"),
+                                    action='store_true', required=False)      
+    self.testar_parser.add_argument('--semantico', help=("Executa os casos de teste para erros semânticos"),
+                                    action='store_true', required=False)
+    self.testar_parser.add_argument('--geracao', help=("Executa os casos de teste para geração de código"),
+                                    action='store_true', required=False)                                      
 
   def parse_args(self):
     return self.arg_parser.parse_args()

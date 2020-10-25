@@ -1,10 +1,11 @@
-loja: "Coli e Vitor"
+loja = "Coli e Vitor"
 
 titulo: "Smartphone Moto G8 Power Lite 64GB Dual Chip Android Tela 6.5” Helio P35 4G Câmera 16MP+ 2MP+ 2MP - Preto"
 
-preco: "Mil Duzentos e Cinquenta Reais"
+preco: 1250.00
 
-imagem: "Imagens/motog8.jpg"
+// Deve ocorrer um erro aqui, pois este caminho é inválido
+imagem: "/home/vitor/Área de Trabalho/c2v/c2v-main/Imagens/Moto G8.jpg"
 
 descricao: "O Moto G8 Power mantém a tradição de oferecer uma bateria com grande capacidade, com 5000 mAh e carregamento rápido de 18 watts, sendo um intermediário por definição com destaque para o conjunto de câmeras e tela Full HD. (Canaltech)"
 

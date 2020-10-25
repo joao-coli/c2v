@@ -45,6 +45,8 @@ class C2VSemantico(AnalisadorSemantico):
 
   
   def analisar(self):
+    self.variaveis = {} # Reiniciando as variáveis
+
     no_errors = True
 
     for cmd in self.modelo.comandos: # Análises retornam 'True' se não houve erros, e 'False' caso tenha ocorrido algum
