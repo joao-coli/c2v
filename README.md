@@ -1,6 +1,6 @@
 # C2V - É quase B2W, mas não é.
 
-Este projeto consiste no desenvolvimento de um [transpilador](https://en.wikipedia.org/wiki/Source-to-source_compiler) cujo objetivo é converter um programa escrito na linguagem C2V em uma página web, utilizando HTML e CSS para formatar o conteúdo de uma página de produto em um site de e-commerce fictício.
+Este projeto consiste no desenvolvimento de um [transpilador](https://en.wikipedia.org/wiki/Source-to-source_compiler) cujo objetivo é converter um programa escrito na linguagem C2V em uma página web, utilizando HTML e CSS para formatar o conteúdo de uma página de produto em um site de e-commerce fictício. Assusta ao [vídeo explicativo](https://www.youtube.com/watch?v=1Bm8OLrl7xw) que passa pelos principais pontos do C2V.
 
 # Como executar
 ## Depedências
