@@ -8,7 +8,7 @@ class C2VSemantico(AnalisadorSemantico):
                  # Tabela de símbolos simplificada, pois não há escopos distintos
   ATRIBUTOS = ['titulo', 'codigo' , 'imagem', 'preco', 'descricao', 'pagamentos',
                'loja', 'avaliacoes', 'lojas', 'sugestoes'] # Todos os atributos
-  OBRIGATORIOS = ['titulo', 'preco', 'descricao'] # Atributos obrigatórios
+  OBRIGATORIOS = ['loja', 'titulo', 'preco', 'descricao'] # Atributos obrigatórios
 
   def __init__(self, modelo): # Espera receber um modelo do textX para a linguagem C2V
     self.modelo = modelo
