@@ -5,7 +5,7 @@ Este projeto consiste no desenvolvimento de um [transpilador](https://en.wikiped
 # Como executar
 ## Depedências
 - [Python 3.5+](https://www.python.org/)
-- [textX](https://github.com/textX/textX)
+- [textX](https://github.com/textX/textX) - testado na versão 2.2.0
 
 ## Executando o programa
 Uma vez que todas as dependências foram instaladas, o código fonte do repositório pode ser baixado. Clone o repositório ou baixe a versão compactada pelo GitHub e extraia o conteúdo do arquivo no diretório que desejar. Isto é tudo que você precisa para poder executar o C2V. Não é necessário criar projetos, configurar IDEs ou executar qualquer outra configuração *desnecessária* ¯\\_(ツ)_/¯.
