@@ -1,0 +1,39 @@
+loja: "Coli e Vitor"
+
+titulo: "Smartphone Moto G8 Power Lite 64GB Dual Chip Android Tela 6.5” Helio P35 4G Câmera 16MP+ 2MP+ 2MP - Preto"
+
+preco: "Mil Duzentos e Cinquenta Reais"
+
+imagem: "/home/vitor/Área de Trabalho/c2v/c2v-main/Imagens/Moto G8.jpg"
+
+descricao: "O Moto G8 Power mantém a tradição de oferecer uma bateria com grande capacidade, com 5000 mAh e carregamento rápido de 18 watts, sendo um intermediário por definição com destaque para o conjunto de câmeras e tela Full HD. (Canaltech)"
+
+
+avaliacoes: 
+  inicio 
+    nota 5 descricao "Além das expectativas... A capa é um tom de azul em degradê... Lindo" autor "Ligiana"
+    nota 3 descricao "É um produto razoável, atende as necessidades básicas." autor "Deivison"
+    nota 4 descricao "Valeu a pena minha escolha na compra, pelo produto e pela loja." autor "Mari"
+	
+  fim
+
+lojas:
+  inicio
+    nome "Magazine Luiza" site "https://www.magazineluiza.com.br/smartphone-motorola-moto-g8-power-64gb-preto-titanium-4g-4gb-ram-tela-64-cam-quadrupla/p/155574900/te/mg8w/"
+    nome "Carrefour" site "https://www.carrefour.com.br/smartphone-motorola-moto-g8-power-64gb-dual-chip-android-10-6-4-octa-core-4-gb-camera-quadrupla-16-mp-8-mp-8-mp-2-mp-azul-MP23587540/p?utm_medium=sem&utm_source=google_dsa_lista&utm_campaign=dsa_todasaspaginas_3p&gclid=Cj0KCQjwxNT8BRD9ARIsAJ8S5xYT4l1AFgRu8uEGrhLsYe4PgMqfJVST42Dew0QbxY1qXwNwgad_4BMaApG2EALw_wcB"
+  fim
+
+sugestoes:
+  inicio
+    produto "Moto G4 Play" preco 650
+    produto "Moto G5 Play" preco 750
+    produto "Moto G6 Play" preco 850
+    produto "Moto G7 Play" preco 950
+    produto "Moto G9 Play" preco 1450
+  fim
+
+pagamentos:
+  inicio
+    a vista desconto 5
+    parcelado de 4 ate 18
+  fim
